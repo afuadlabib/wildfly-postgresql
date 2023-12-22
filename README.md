@@ -2,9 +2,12 @@
 add postgresql driver in wildfly server 
 ## creat folder org/posgresql/main
 in wildfly server folder
+- module.xml
+```xml
+```
 
 - donwload postgresql driver put in org/postgresql/main
-- creat file module.xml in org/potgresql/main
+- create file module.xml in org/potgresql/main
 
 folder structure
 - wildfly-version
@@ -13,8 +16,11 @@ folder structure
 - ------ main
 - ------- module.xml
 - ------- postgresql-42.7.1.jar
+## add resource
+- in /wildfly-version/standlone/configuration/standlone.xml 
 ```xml
-<subsystem xmlns="urn:jboss:domain:datasources:7.1">
+...
+        <subsystem xmlns="urn:jboss:domain:datasources:7.1">
             <datasources>
                 <datasource jndi-name="java:jboss/datasources/PostgresDS" pool-name="PostgresDs">
                     <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
@@ -31,4 +37,5 @@ folder structure
                 </drivers>
             </datasources>
         </subsystem>
+...
 ```
