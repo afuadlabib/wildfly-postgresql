@@ -13,3 +13,22 @@ folder structure
 - ------ main
 - ------- module.xml
 - ------- postgresql-42.7.1.jar
+```xml
+<subsystem xmlns="urn:jboss:domain:datasources:7.1">
+            <datasources>
+                <datasource jndi-name="java:jboss/datasources/PostgresDS" pool-name="PostgresDs">
+                    <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
+                    <driver>postgresql</driver>
+                    <security>
+                        <user-name>postgres</user-name>
+                        <password>secreat</password>
+                    </security>
+                </datasource>
+                <drivers>
+                    <driver name="postgresql" module="org.postgresql">
+                        <driver-class>org.postgresql.Driver</driver-class>
+                    </driver>
+                </drivers>
+            </datasources>
+        </subsystem>
+```
