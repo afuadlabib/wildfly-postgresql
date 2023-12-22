@@ -4,6 +4,16 @@ add postgresql driver in wildfly server
 in wildfly server folder
 - module.xml
 ```xml
+<?xml version="1.1" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="org.postgresql">
+    <resources>
+        <recources-root path="portgresql-42.7.1.jar"/>
+    </resources>
+    <depencencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+    </depencencies>
+</module>
 ```
 
 - donwload postgresql driver put in org/postgresql/main
