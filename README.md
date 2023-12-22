@@ -26,8 +26,8 @@ folder structure
 - ------ main
 - ------- module.xml
 - ------- postgresql-42.7.1.jar
-## add resource
-- in /wildfly-version/standlone/configuration/standlone.xml 
+## add resource configuration
+- in /wildfly-version/standalone/configuration/standalone.xml 
 ```xml
 ...
         <subsystem xmlns="urn:jboss:domain:datasources:7.1">
