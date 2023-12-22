@@ -7,7 +7,7 @@ in wildfly server folder
 <?xml version="1.1" encoding="UTF-8"?>
 <module xmlns="urn:jboss:module:1.1" name="org.postgresql">
     <resources>
-        <recources-root path="portgresql-42.7.1.jar"/>
+        <recource-root path="portgresql-42.7.1.jar"/>
     </resources>
     <depencencies>
         <module name="javax.api"/>
